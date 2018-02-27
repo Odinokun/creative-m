@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: $os;
+  font-size: 14px;
+  line-height: 1.38;
+  color: $text;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+body.fix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.24;
+  margin: 0 0 10px 0;
+}
+h1 {
+  font-size: 36px;
+  color: #fff;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #262626;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #262626;
+}
+h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #0087d7;
+}
+h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #262626;
+}
+h6 {
+  font-size: 14px;
+  color: #0087d7;
+}
+p {
+  font-size: 14px;
+  strong {
+    font-weight: 700;
+  }
+}
+a {
+  color: $highlight;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ol,
+ul {
+  li {
+    padding: 3px 0;
+    color: #262626;
+  }
+}
+ul {
+  li {
+    // путь к кастомной картинке пункта ul
+    list-style-image: url('../img/ul.jpg');
+  }
+}
+//кастомные пункты списка с цифрами
+ol {
+  // list-style: none;
+  // @include counter(li);
+  li::before {
+    // color: $brand;
+  }
+}
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+input {
+  padding: 3px 10px 5px 10px;
+  color: $text;
+  border: 1px solid $text;
+  &::placeholder {
+    @include placeholder-color($text);
+  }
+}
+textarea {
+  resize: none;
+}
+input.error,
+textarea.error {
+  border-color: #ed1b24 !important;
+  background: #fbd1d3 !important;
+}
+svg {
+  display: block;
+  overflow: visible;
+}
+//изменяем цвет выделения текста мышью
+::selection {
+  // background-color: $brand;
+  // color: $brand;
+  // text-shadow: none;
+}
+.main {
+  position: relative;
+  flex: 1 0 auto;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include max(768) {
+    padding: 0 20px;
+  }
+  @include max(425) {
+    padding: 0 10px;
+  }
+}
+.header,
+.page-header,
+.footer {
+  flex: 0 0 auto;
+}
