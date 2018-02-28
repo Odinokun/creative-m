@@ -1,0 +1,27 @@
+.header-bottom {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+}
+.main-header-bottom__title {
+  font-size: 36px;
+  position: relative;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #fff;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 15px);
+    bottom: 0;
+    width: 100vw;
+    height: 2px;
+    margin: auto;
+    content: '';
+    background-color: $highlight;
+  }
+}

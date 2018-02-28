@@ -30,11 +30,15 @@
 }
 .header-contacts__list {
   display: flex;
+  justify-content: flex-end;
+  flex:auto;
 }
 .header-contacts__item {
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  //padding-left: 30px;
+  justify-content: flex-end;
+  flex:auto;
   &:first-child {
     padding-left: 0;
   }
@@ -42,8 +46,9 @@
     max-width: 14px;
     max-height: 14px;
     margin-right: 10px;
+    flex:none;
 
-    fill: $highlight;
+    fill: $highlight-hover;
   }
   span {
     font-size: 11px;
