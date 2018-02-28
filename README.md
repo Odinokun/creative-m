@@ -1,4 +1,4 @@
-﻿# Front-end quick start template
+﻿# creative-m
 
 ## Используемые технологии:
 * Gulp 4.0

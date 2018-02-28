@@ -1,0 +1,52 @@
+.header {
+  overflow: hidden;
+}
+.top-header {
+  background-color: $brand;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+  .btn-red {
+    font-size: 14px;
+    line-height: 34px;
+    flex: none;
+    height: 32px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+}
+
+.header-messenger {
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+}
+.header-messenger__text {
+  line-height: 1;
+  padding-right: 27px;
+  color: #fff;
+}
+.header-messenger__list {
+  display: flex;
+}
+.header-messenger__link {
+  display: block;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: opacity .5s;
+  border-radius: 6px;
+  &:hover {
+    opacity: .8;
+  }
+  img {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+}

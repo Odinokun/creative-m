@@ -1,0 +1,14 @@
+extends ../_template
+
+block variables
+  - var title = 'Услуги'
+  - var pageHeaderTitle = 'Услуги'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.services#servises(style="min-height:110vh;")
+  //end   content
+
+  include ../sections/footer

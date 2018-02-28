@@ -1,0 +1,28 @@
+//begin header-contacts
+.header-contacts
+  .container
+    a(href="#").logo
+      img(src="assets/img/logo.jpg" alt="Creative Motors company logo")
+    .header-contacts__list
+      .header-contacts__item.header-contacts__item--adress
+        svg
+          use(xlink:href="assets/img/sprite.svg#marker")
+        span.header-contacts__item-text
+          |Наш адрес:
+          =" "
+          a(href="https://goo.gl/maps/XwUu8qvjxv42" target="_blank" rel="nofollow noopener noreferrer") ул. Михайлова, д. 21
+      .header-contacts__item.header-contacts__item--phone
+        svg
+          use(xlink:href="assets/img/sprite.svg#phone")
+        span.header-contacts__item-text
+          |Тел:
+          =" "
+          a(href="tel:+88129396401") 8(812)939-64-01
+      .header-contacts__item.header-contacts__item--clock
+        svg
+          use(xlink:href="assets/img/sprite.svg#clock")
+        span.header-contacts__item-text
+          | Режим работы:
+          =" "
+          a(href="") с 10:00 до 21:00 без выходных
+//end header-contacts
