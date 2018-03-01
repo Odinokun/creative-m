@@ -1,8 +1,90 @@
+.menu {
+  @include max(920) {
+  }
+}
+
+.menu__mobile-header {
+  display: none;
+  padding: 5px;
+  text-align: center;
+  background-color: $highlight-hover;
+
+  @include max(920) {
+    display: block;
+  }
+}
+.menu__mobile-title {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #0c172b;
+}
+
+
+.menu-container {
+  @include max(920) {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background-color: $highlight-hover;
+  }
+}
+
+.menu__header {
+  display: none;
+
+  @include max(920) {
+    display: block;
+  }
+}
+.menu__header-inn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 45px 0 45px 32px;
+  text-align: center;
+}
+.menu__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #0c172b;
+}
+.menu__close {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: #fff;
+  }
+}
 .menu__list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0 10px;
+
+  @include max(960) {
+    padding: 0;
+  }
+  @include max(920) {
+    flex-direction: column;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
 }
 .menu__item {
   padding: 0;
@@ -17,8 +99,18 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+
+  @include max(920) {
+    font-size: 24px;
+    padding: 3px 16px;
+  }
   &:hover {
     color: $highlight-hover;
+
+    @include max(920) {
+      text-decoration: underline;
+      color: #fff;
+    }
   }
   &.active {
     text-decoration: underline;
@@ -28,6 +120,46 @@
 .menu__item--parent {
   position: relative;
   padding-right: 20px;
+  transition: .5s;
+  background-color: transparent;
+
+  @include max(920) {
+    padding-right: 0;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: none;
+    width: 100vw;
+    content: '';
+    transition: .5s;
+    background-color: $highlight-hover;
+
+    @include max(920) {
+      display: block;
+    }
+  }
+  &::before {
+    right: 100%;
+  }
+  &::after {
+    left: 100%;
+  }
+  &.active {
+    background-color: $dark;
+    &::before,
+    &::after {
+      background-color: $dark;
+    }
+    .menu__sublist {
+      background-color: $dark;
+    }
+    .menu__cross {
+      transform: rotate(45deg);
+    }
+  }
   &:hover {
     .menu__arrow {
       border-top: 5px solid $highlight-hover;
@@ -40,17 +172,45 @@
 }
 .menu__arrow {
   position: absolute;
-  top: 0;
+  top: 23px;
   right: 14px;
-  bottom: 0;
   display: block;
   width: 10px;
   height: 5px;
-  margin: auto;
   transition: border-color .5s;
   border-top: 5px solid #fff;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
+
+  @include max(920) {
+    display: none;
+  }
+}
+.menu__cross {
+  position: absolute;
+  top: 12px;
+  right: 9px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  @include max(920) {
+    display: block;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    content: '';
+    background-color: #fff;
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 .menu__sublist {
   position: absolute;
@@ -63,6 +223,19 @@
   pointer-events: none;
   opacity: 0;
   background-color: #fff;
+
+  @include max(920) {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    padding-top: 0;
+    transition: background-color .5s;
+    transform: translateX(0);
+    pointer-events: auto;
+    opacity: 1;
+    background-color: $highlight-hover;
+  }
   &::before {
     position: absolute;
     top: -8px;
@@ -75,6 +248,10 @@
     border-right: 10px solid transparent;
     border-bottom: 8px solid #fff;
     border-left: 10px solid transparent;
+
+    @include max(920) {
+      display: none;
+    }
   }
 }
 .menu__subitem {
@@ -88,7 +265,34 @@
   white-space: nowrap;
   text-decoration: none;
   color: #151b3c;
+
+  @include max(920) {
+    font-size: 18px;
+    padding: 0 16px;
+    color: #fff;
+  }
   &:hover {
     color: $highlight-hover;
+  }
+}
+.menu__mobile-phone {
+  display: none;
+
+  @include max(560) {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .header-contacts__item--phone {
+    display: flex;
+    flex:none;
+    svg {
+      max-width: 23px;
+      max-height: 23px;
+    }
+    a {
+      font-size: 24px;
+
+    }
   }
 }

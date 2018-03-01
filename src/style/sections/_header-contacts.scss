@@ -2,18 +2,22 @@
   .container {
     display: flex;
     justify-content: space-between;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+    @include max(560) {
+      padding: 0;
+    }
   }
 }
 .logo {
   position: relative;
   flex: none;
-  width: 100%;
-  max-width: 165px;
-  height: auto;
-  max-height: 80px;
+  width: 165px;
   margin-top: -35px;
+
+  @include max(560) {
+    display: none;
+  }
   &::before {
     position: absolute;
     right: -100vw;
@@ -22,6 +26,10 @@
     height: 2px;
     content: '';
     background-color: $highlight;
+
+    @include max(920) {
+      display: none;
+    }
   }
   img {
     display: block;
@@ -30,23 +38,22 @@
 }
 .header-contacts__list {
   display: flex;
+  flex: auto;
   justify-content: flex-end;
-  flex:auto;
 }
 .header-contacts__item {
   display: flex;
   align-items: center;
-  //padding-left: 30px;
+  flex: auto;
   justify-content: flex-end;
-  flex:auto;
   &:first-child {
     padding-left: 0;
   }
   svg {
+    flex: none;
     max-width: 14px;
     max-height: 14px;
     margin-right: 10px;
-    flex:none;
 
     fill: $highlight-hover;
   }
@@ -66,8 +73,21 @@
     }
   }
 }
+.header-contacts__item--adress {
+  @include max(920) {
+    display: none;
+  }
+}
 .header-contacts__item--phone {
+  @include max(560) {
+    display: none;
+  }
   a {
     font-size: 16px;
+  }
+}
+.header-contacts__item--clock {
+  @include max(920) {
+    display: none;
   }
 }

@@ -1,6 +1,14 @@
 // begin menu
 nav.menu
-  .container
+  header.menu__mobile-header
+    span.menu__mobile-title Меню
+  .container.menu-container#menu-container
+    header.menu__header
+      .menu__header-inn
+        span.menu__title Меню
+        .menu__close
+          svg
+            use(xlink:href="assets/img/sprite.svg#close")
     ul.menu__list
       li.menu__item
         a.menu__link.active(href="#") Главная
@@ -9,6 +17,7 @@ nav.menu
       li.menu__item.menu__item--parent
         a.menu__link(href="#") Услуги
         span.menu__arrow
+        span.menu__cross
         ul.menu__sublist
           li.menu__subitem
             a.menu__sublink(href="#") Ремонт ходовой
@@ -28,4 +37,10 @@ nav.menu
         a.menu__link(href="#") BMW клуб
       li.menu__item
         a.menu__link(href="#") Контакты
+  .menu__mobile-phone
+    .header-contacts__item.header-contacts__item--phone
+      svg
+        use(xlink:href="assets/img/sprite.svg#phone")
+      span.header-contacts__item-text
+        a(href="tel:+88129396401") 8 (812) 939-64-01
 // begin end

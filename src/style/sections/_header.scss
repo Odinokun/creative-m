@@ -2,6 +2,13 @@
   z-index: 1;
 }
 .top-header {
+  overflow-x: hidden;
+
+  @include max(560) {
+    margin-bottom: -10px;
+  }
+}
+.top-header__dark {
   background-color: $brand;
   .container {
     display: flex;
@@ -9,6 +16,17 @@
     justify-content: space-between;
     padding-top: 4px;
     padding-bottom: 5px;
+
+    @include max(560) {
+      align-items: flex-start;
+    }
+    @include max(425) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @include max(380) {
+      flex-wrap: nowrap;
+    }
   }
   .btn-red {
     font-size: 14px;
@@ -17,18 +35,51 @@
     height: 32px;
     margin-right: 20px;
     margin-left: auto;
+
+    @include max(560) {
+      margin: 0;
+    }
+    @include max(420) {
+      font-size: 13px;
+      line-height: 36px;
+    }
+    @include max(380) {
+      font-size: 12px;
+    }
   }
 }
 
+.header__mobile-logo {
+  display: none;
+  width: 100px;
+  margin-top: -4px;
+
+  @include max(560) {
+    display: block;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .header-messenger {
   display: flex;
   align-items: center;
   padding-left: 200px;
+
+  @include max(560) {
+    padding-left: 0;
+  }
 }
 .header-messenger__text {
   line-height: 1;
   padding-right: 27px;
   color: #fff;
+
+  @include max(820) {
+    display: none;
+  }
 }
 .header-messenger__list {
   display: flex;
@@ -41,12 +92,20 @@
   margin-right: 10px;
   transition: opacity .5s;
   border-radius: 6px;
+  @include max(380) {
+    width: 28px;
+    height: 28px;
+    margin-top: 3px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   &:hover {
     opacity: .8;
   }
   img {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 100%;
+    height: 100%;
   }
 }

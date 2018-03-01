@@ -2,23 +2,26 @@
 header.header
   //begin top-header
   .top-header
-    .container
-      .header-messenger
-        span.header-messenger__text Свяжитесь с нами прямо сейчас!
-        .header-messenger__list
-          a(href="tg://resolve?domain=nikname").header-messenger__link
-            img(src="assets/img/telegram.svg" alt="telegram link")
-          a(href="whatsapp://send?phone=+88129396401").header-messenger__link
-            img(src="assets/img/whatsapp.svg" alt="whatsapp link")
-          a(href="viber://chat?number=+88129396401").header-messenger__link
-            img(src="assets/img/viber.svg" alt="viber link")
-      button.btn.btn-red Заказать звонок
+    .top-header__dark
+      .container
+        a(href="#").header__mobile-logo
+          img(src="assets/img/logo.jpg" alt="Creative Motors company logo")
+        .header-messenger
+          span.header-messenger__text Свяжитесь с нами прямо сейчас!
+          .header-messenger__list
+            a(href="tg://resolve?domain=nikname").header-messenger__link
+              img(src="assets/img/telegram.svg" alt="telegram link")
+            a(href="whatsapp://send?phone=+88129396401").header-messenger__link
+              img(src="assets/img/whatsapp.svg" alt="whatsapp link")
+            a(href="viber://chat?number=+88129396401").header-messenger__link
+              img(src="assets/img/viber.svg" alt="viber link")
+        button.btn.btn-red Заказать звонок
 
+    include header-contacts
   //end top-header
 
   // begin main-header
   .main-header
-    include header-contacts
     include ../elements/menu
     include ../elements/header-bottom
   // end main-header

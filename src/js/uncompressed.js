@@ -27,5 +27,18 @@ function pageWidget(pages) {
 
 // END Меню для навигации при разработке
 
+//begin menu
+$('.menu__cross').on('click', function () {
+  $(this).siblings('.menu__sublist').slideToggle();
+  $(this).parent('.menu__item--parent').toggleClass('active');
+});
+$('.menu__mobile-title').on('click', function () {
+  $('#menu-container').slideDown();
+});
+$('.menu__close').on('click', function () {
+  $('#menu-container').slideUp();
+});
+//end menu
+
 
 //====== Begin Programmer code ======
