@@ -176,9 +176,11 @@ svg {
   transition: background-color .5s;
   white-space: nowrap;
   text-decoration: none;
+  cursor: pointer;
   text-transform: uppercase;
   color: #fff;
   border: none;
+  text-align: center;
   border-radius: 6px;
 }
 .btn-red {

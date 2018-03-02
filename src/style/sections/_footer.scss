@@ -1,1 +1,29 @@
+.footer {
+  background-color: $brand;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    @include max(680) {
+      justify-content: space-around;
+    }
+  }
+}
+.footer__copyright,
+.footer__slogan,
+.footer__proshift {
+  font-size: 12px;
+  line-height: 1.1;
+  display: block;
+  margin: 0;
+  padding: 12px;
+  color: #fff;
+}
+.footer__proshift {
+  padding-right: 40px;
+  background-image: url('../img/proshift.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}

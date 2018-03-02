@@ -1,0 +1,19 @@
+.services {
+  & > .container {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+.services-content {
+  padding-left: 20px;
+
+  @include max(680) {
+    padding-left: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
