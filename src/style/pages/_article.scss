@@ -1,0 +1,51 @@
+.article {
+  & > .container {
+    display: flex;
+    padding-bottom: 50px;
+  }
+}
+
+.article-content {
+  padding-right: 20px;
+
+  @include max(680) {
+    padding-right: 0;
+  }
+}
+.article__img {
+  position: relative;
+  margin-bottom: 20px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.article__date {
+  position: absolute;
+  top: 8px;
+  left: -2px;
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 0 6px 6px 0;
+  background-color: $highlight;
+}
+.article__date--day {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+.article__date--month {
+  font-size: 10px;
+  color: #fff;
+}
+.article__title {
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #262626;
+}

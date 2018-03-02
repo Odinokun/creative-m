@@ -1,0 +1,63 @@
+extends ../_template
+
+block variables
+  - var title = 'Новости'
+  - var pageHeaderTitle = 'Новости'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.article#article
+    header.page-header
+      h2.page-header__title Новости и полезная информация
+
+    .container
+      // begin article-content
+      .article-content
+        .article__img
+          .article__date
+            span.blog-item__date--day 21
+            span.blog-item__date--month сентября
+          img(src="assets/img/article/article.jpg" alt="image")
+
+        h3.article__title Подготовка авто к зиме
+        p Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации соответствующий условий активизации. С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание модели развития. Равным образом постоянный количественный рост и сфера нашей активности требуют определения и уточнения соответствующий условий активизации.
+        p Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+      // end article-content
+
+      // begin aside-left
+      aside.aside-right
+        .aside-left__menu
+          h3.aside-left__title Наши услуги
+          ul.aside-left__list
+            li.aside-left__item
+              a(href="#").aside-left__link.active Компьютерная диагностика
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт подвески
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт тормозной системы
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт двигателей
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт электрики
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт системы охлаждения
+            li.aside-left__item
+              a(href="#").aside-left__link Ремонт топливной системы
+            li.aside-left__item
+              a(href="#").aside-left__link Чип-тюннинг
+
+        .aside-left__banner(style="background-image:url('assets/img/aside-left-banner.jpg')")
+          a(href="#").aside-left__banner-link
+            |Наш BMW клуб
+            br
+            span вступайте!
+      // end aside-left
+
+    include ../sections/sale-section
+    include ../sections/footer-lg
+
+  //end   content
+
+  include ../sections/footer

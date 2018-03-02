@@ -7,6 +7,7 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'album',
+    'article',
     'blog',
     'gallery',
     'services'
