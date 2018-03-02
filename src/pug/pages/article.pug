@@ -26,34 +26,39 @@ block content
         p Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание дальнейших направлений развития. С другой стороны укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
       // end article-content
 
-      // begin aside-left
+      // begin aside-right
       aside.aside-right
-        .aside-left__menu
-          h3.aside-left__title Наши услуги
-          ul.aside-left__list
-            li.aside-left__item
-              a(href="#").aside-left__link.active Компьютерная диагностика
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт подвески
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт тормозной системы
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт двигателей
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт электрики
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт системы охлаждения
-            li.aside-left__item
-              a(href="#").aside-left__link Ремонт топливной системы
-            li.aside-left__item
-              a(href="#").aside-left__link Чип-тюннинг
+        .aside-right__menu
+          h3.aside-right__title Категории
+          ul.aside-right__list
+            li.aside-right__item
+              a(href="#").aside-right__link Все новости
+            li.aside-right__item
+              a(href="#").aside-right__link Новости сервиса
+            li.aside-right__item
+              a(href="#").aside-right__link События нашего клуба
+            li.aside-right__item
+              a(href="#").aside-right__link Полезная информация
 
-        .aside-left__banner(style="background-image:url('assets/img/aside-left-banner.jpg')")
-          a(href="#").aside-left__banner-link
+        .aside-right__banner(style="background-image:url('assets/img/aside-left-banner.jpg')")
+          a(href="#").aside-right__banner-link
             |Наш BMW клуб
             br
             span вступайте!
-      // end aside-left
+
+        .aside-last-article
+          h3.aside-last-article__title Последние записи
+          ul.aside-last-article__list
+            li.aside-last-article__item
+              a(href="#").aside-last-article__link Подготовка авто к зиме
+              span.aside-last-article__date 21.02.2018
+            li.aside-last-article__item
+              a(href="#").aside-last-article__link Подготовка авто к лету
+              span.aside-last-article__date 21.02.2018
+            li.aside-last-article__item
+              a(href="#").aside-last-article__link Подготовка авто к продаже
+              span.aside-last-article__date 21.02.2018
+      // end aside-right
 
     include ../sections/sale-section
     include ../sections/footer-lg

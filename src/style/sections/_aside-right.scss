@@ -1,66 +1,96 @@
-.aside-left {
+.aside-right {
   flex: none;
-  width: 260px;
+  width: 180px;
   @include max(680) {
     display: none;
   }
 }
-.aside-left__menu {
-  width: 100%;
-  margin-bottom: 20px;
-  border: 2px solid $highlight;
+
+
+.aside-right__menu {
+  margin-bottom: 25px;
 }
-.aside-left__title {
-  font-size: 16px;
+.aside-right__title {
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   margin: 0;
-  padding: 16px;
-  text-align: center;
+  padding: 0 7px  10px 7px;
   text-transform: uppercase;
-  color: #fff;
-  background-color: $highlight;
+  color: $highlight;
+  border-bottom: 2px solid #e3e6e8;
 }
-.aside-left__list {
+.aside-right__list {
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0 0;
 }
-.aside-left__item {
-  padding: 0 9px;
+.aside-right__item {
+  padding: 0 7px;
   list-style: none;
 }
-.aside-left__link {
+.aside-right__link {
   font-size: 14px;
   display: block;
-  padding: 10px;
+  padding: 5px 0;
   transition: color .5s;
-  text-decoration: none;
   color: #262626;
-  border-bottom: 2px solid #e3e6e8;
-  &.active {
-    color: #a3a3a3;
-  }
   &:hover {
     color: $highlight;
   }
 }
 
-.aside-left__banner {
-  padding: 35px 10px 20px 10px;
+.aside-right__banner {
+  margin-bottom: 25px;
+  padding: 22px 10px 17px 10px;
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.aside-left__banner-link {
-  font-size: 24px;
+.aside-right__banner-link {
+  font-size: 16px;
   font-weight: 700;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   span {
-    font-size: 30px;
+    font-size: 20px;
     color: #3bb6ff;
   }
+}
+
+
+.aside-last-article__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding: 0 7px  10px 7px;
+  text-transform: uppercase;
+  color: $highlight;
+  border-bottom: 2px solid #e3e6e8;
+}
+.aside-last-article__list {
+  margin: 0;
+  padding: 5px 0 0 0;
+}
+.aside-last-article__item {
+  margin: 5px 0 10px 0;
+  padding: 0 7px;
+  list-style: none;
+}
+.aside-last-article__link {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+  padding: 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.aside-last-article__date {
+  font-size: 10px;
+  display: block;
+  color: #141f1f;
 }
