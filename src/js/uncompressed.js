@@ -6,6 +6,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
+    'gallery',
     'services'
     ]);
 });

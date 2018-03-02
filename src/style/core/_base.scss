@@ -44,27 +44,21 @@ h6 {
 h1 {
   font-size: 36px;
   text-transform: uppercase;
-  color: #fff;
-
-  @include max(560) {
+  color: #fff;@include max(560) {
     font-size: 28px;
   }
 }
 h2 {
   font-size: 30px;
   font-weight: 400;
-  color: #262626;
-
-  @include max(560) {
+  color: #262626;@include max(560) {
     font-size: 24px;
   }
 }
 h3 {
   font-size: 24px;
   font-weight: 400;
-  color: #262626;
-
-  @include max(560) {
+  color: #262626;@include max(560) {
     font-size: 18px;
   }
 }
@@ -156,9 +150,7 @@ svg {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 20px;
-
-  @include max(425) {
+  padding: 0 20px;@include max(425) {
     padding: 0 10px;
   }
 }
@@ -173,14 +165,14 @@ svg {
   line-height: 38px;
   height: 36px;
   padding: 0 12px;
+  cursor: pointer;
   transition: background-color .5s;
+  text-align: center;
   white-space: nowrap;
   text-decoration: none;
-  cursor: pointer;
   text-transform: uppercase;
   color: #fff;
   border: none;
-  text-align: center;
   border-radius: 6px;
 }
 .btn-red {

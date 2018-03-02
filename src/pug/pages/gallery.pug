@@ -1,0 +1,32 @@
+extends ../_template
+
+mixin gallery__item(text)
+  .gallery__item
+    a(href="#").gallery__link
+      .gallery__img
+        img(src="assets/img/gallery-img.jpg" alt="BMW")
+      span.gallery__text #{text}
+
+block variables
+  - var title = 'Галерея'
+  - var pageHeaderTitle = 'Галерея'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.gallery#gallery
+    .container
+      .gallery__header
+        h2.gallery__title Фотографии автосервиса
+      .gallery__list
+        +gallery__item('Компьютерная диагностика')
+        +gallery__item('Ремонт двигателя')
+        +gallery__item('Сложный ремонт двигателя с заменой деталей')
+        +gallery__item('Компьютерная диагностика')
+        +gallery__item('Ремонт двигателя')
+        +gallery__item('Сложный ремонт двигателя с заменой деталей')
+
+  //end   content
+
+  include ../sections/footer
