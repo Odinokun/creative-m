@@ -44,21 +44,27 @@ h6 {
 h1 {
   font-size: 36px;
   text-transform: uppercase;
-  color: #fff;@include max(560) {
+  color: #fff;
+
+  @include max(560) {
     font-size: 28px;
   }
 }
 h2 {
   font-size: 30px;
   font-weight: 400;
-  color: #262626;@include max(560) {
+  color: #262626;
+
+  @include max(560) {
     font-size: 24px;
   }
 }
 h3 {
   font-size: 24px;
   font-weight: 400;
-  color: #262626;@include max(560) {
+  color: #262626;
+
+  @include max(560) {
     font-size: 18px;
   }
 }
@@ -150,7 +156,9 @@ svg {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 20px;@include max(425) {
+  padding: 0 20px;
+
+  @include max(425) {
     padding: 0 10px;
   }
 }
@@ -159,6 +167,18 @@ svg {
 .footer {
   flex: 0 0 auto;
 }
+
+.page-header {
+  padding: 30px 0 25px 0;
+  text-align: center;
+}
+.page-header__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #262626;
+}
+
 .btn {
   font-size: 16px;
   font-weight: 700;

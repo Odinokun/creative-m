@@ -1,0 +1,39 @@
+extends ../_template
+
+mixin album__item(img)
+  .album__item
+    a(href="assets/img/albums/bmw-" + img + ".jpg" data-fancybox).album__link
+      img(src="assets/img/albums/bmw-" + img + "-thumb.jpg" alt="BMW")
+
+block variables
+  - var title = 'Альбом'
+  - var pageHeaderTitle = 'Альбом'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.album#album
+    .container
+      .page-header
+        h2.page-header__title Ремонт двигателя м52
+      .gallery__list
+        +album__item('01')
+        +album__item('02')
+        +album__item('03')
+        +album__item('01')
+        +album__item('02')
+        +album__item('03')
+        +album__item('01')
+        +album__item('02')
+        +album__item('03')
+        +album__item('01')
+        +album__item('02')
+        +album__item('03')
+        +album__item('01')
+        +album__item('02')
+        +album__item('03')
+
+  //end   content
+
+  include ../sections/footer

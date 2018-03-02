@@ -1,4 +1,4 @@
-.gallery__list {
+.album__list {
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px 40px 20px;
@@ -7,7 +7,7 @@
     padding: 0 0 40px 0;
   }
 }
-.gallery__item {
+.album__item {
   width: 33.33%;
   padding: 0 20px 25px 20px;
 
@@ -17,31 +17,11 @@
   @include max(560) {
     padding: 0 10px 15px 10px;
   }
-
-  &:hover {
-    .gallery__text {
-      color: $highlight;
-    }
-  }
 }
-.gallery__link {
+.album__link {
   display: block;
-  text-decoration: none;
-}
-.gallery__img {
-  margin-bottom: 10px;
   img {
     display: block;
     width: 100%;
-  }
-}
-.gallery__text {
-  font-size: 16px;
-  line-height: 1.1;
-  transition: color .5s;
-  color: #262626;
-
-  @include max(560) {
-    font-size: 14px;
   }
 }

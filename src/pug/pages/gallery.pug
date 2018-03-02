@@ -2,7 +2,7 @@ extends ../_template
 
 mixin gallery__item(text)
   .gallery__item
-    a(href="#").gallery__link
+    a(href="album.html").gallery__link
       .gallery__img
         img(src="assets/img/gallery-img.jpg" alt="BMW")
       span.gallery__text #{text}
@@ -17,8 +17,8 @@ block content
   //begin content
   section.main.gallery#gallery
     .container
-      .gallery__header
-        h2.gallery__title Фотографии автосервиса
+      .page-header
+        h2.page-header__title Фотографии автосервиса
       .gallery__list
         +gallery__item('Компьютерная диагностика')
         +gallery__item('Ремонт двигателя')
