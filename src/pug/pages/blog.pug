@@ -1,0 +1,54 @@
+extends ../_template
+
+mixin blog__item(filt, day, month, text)
+  .blog__item(data-filter="" + filt + "")
+    .blog-item__date
+      span.blog-item__date--day #{day}
+      span.blog-item__date--month #{month}
+
+    a(href="article.html").blog__link
+      .blog__img
+        img(src="assets/img/blog.jpg" alt="BMW")
+      span.blog__text #{text}
+
+block variables
+  - var title = 'Наш блог'
+  - var pageHeaderTitle = 'Наш блог'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.blog#blog
+    .container
+      .page-header
+        h2.page-header__title Новости и полезная информация
+
+      .blog-filter
+        ul.blog-filter__list
+          li.blog-filter__item.active(data-filter="all") Все новости
+          li.blog-filter__item(data-filter="news") Новости сервиса
+          li.blog-filter__item(data-filter="events") События нашего клуба
+          li.blog-filter__item(data-filter="info") Полезная информация
+
+      .blog__list#blog__list
+        +blog__item('news',   '21', 'ноября', 'Новинки модельного ряда BMW')
+        +blog__item('events', '21', 'ноября', 'Новинки и события')
+        +blog__item('news',   '21', 'ноября', 'Новинки и новости')
+        +blog__item('info',   '21', 'ноября', 'Новинки и информация')
+        +blog__item('news',   '21', 'ноября', 'Новинки модельного ряда BMW')
+        +blog__item('events', '21', 'ноября', 'Новинки и события')
+        +blog__item('news',   '21', 'ноября', 'Новинки и новости')
+        +blog__item('info',   '21', 'ноября', 'Новинки и информация')
+        +blog__item('news',   '21', 'ноября', 'Новинки модельного ряда BMW')
+        +blog__item('events', '21', 'ноября', 'Новинки и события')
+        +blog__item('news',   '21', 'ноября', 'Новинки и новости')
+        +blog__item('info',   '21', 'ноября', 'Новинки и информация')
+        +blog__item('news',   '21', 'ноября', 'Новинки модельного ряда BMW')
+        +blog__item('events', '21', 'ноября', 'Новинки и события')
+        +blog__item('news',   '21', 'ноября', 'Новинки и новости')
+        +blog__item('info',   '21', 'ноября', 'Новинки и информация')
+
+  //end   content
+
+  include ../sections/footer

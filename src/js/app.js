@@ -12,6 +12,9 @@ $(function() {
   // begin menu
   require('./modules/menu')();
 
+  // begin blog filter
+  require('./modules/blog-filter')();
+
   // begin Animate.css
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();
