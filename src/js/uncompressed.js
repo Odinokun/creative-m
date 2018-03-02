@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'album',
     'article',
     'blog',
+    'contacts',
     'gallery',
     'services'
     ]);

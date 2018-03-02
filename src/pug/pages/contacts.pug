@@ -1,0 +1,38 @@
+extends ../_template
+
+block variables
+  - var title = 'Контакты'
+  - var pageHeaderTitle = 'Контакты'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main.contacts#contacts
+    header.page-header
+      h2.page-header__title Как с нами связаться
+
+    .container
+      .contacts__item.contacts__item--left
+        h3.contacts__title Наш адрес
+        span.contacts__text г. Санкт-Петербург, ул. Михайлова, дом 21.
+        span.contacts__text Въезд через шлагбаум. 5 минут от метро Площадь Ленина.
+        span.contacts__text После въезда через 50 метров слева.
+        a(href="https://goo.gl/maps/XwUu8qvjxv42" target="_blank" rel="nofollow noopener noreferrer").btn.btn-blue Подробная карта проезда
+
+      .contacts__item.contacts__item--right
+        h3.contacts__title Телефон
+        a(href="tel:+78129131017").contacts__item--phone +7 (812) 913-10-17
+        h3.contacts__title e-mail
+        a(href="mailto:bmw@creative-m.ru").contacts__item--mail bmw@creative-m.ru
+
+
+    .contacts-map#contacts-map
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1997.5020199793285!2d30.3595995160977!3d59.956995681882844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631793b08ef89%3A0x16e173bc6f2bfb7f!2z0YPQuy4g0JzQuNGF0LDQudC70L7QstCwLCAyMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk1MDA5!5e0!3m2!1sru!2sua!4v1520003639515" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen)
+
+    include ../sections/sale-section
+    include ../sections/footer-lg
+
+  //end   content
+
+  include ../sections/footer
