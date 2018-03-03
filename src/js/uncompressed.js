@@ -32,4 +32,16 @@ function pageWidget(pages) {
 // END Меню для навигации при разработке
 
 
+// begin popup open
+$('.popup-open').on('click', function() {
+  $('.popup, .popup__layer').fadeIn();
+});
+// end   popup open
+
+// begin popup close
+$('.popup__close').on('click', function() {
+  $('.popup, .popup__layer').fadeOut();
+});
+// end   popup close
+
 //====== Begin Programmer code ======
