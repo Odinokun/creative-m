@@ -9,16 +9,16 @@
   box-shadow: 0 12px 20px rgba(54, 87, 128, .4);
 
   .slick-next,
-  .slick-prev {
-    width: 35px;
-    height: 35px;
-    transition: background-color .5s;
-    border-radius: 50%;
-    background-color: #455f75;
-    &:hover {
-      background-color: $highlight;
-    }
-  }
+     .slick-prev {
+       width: 35px;
+       height: 35px;
+       transition: background-color .5s;
+       border-radius: 50%;
+       background-color: #455f75;
+       &:hover {
+         background-color: $highlight;
+       }
+     }
 }
 .second-section-slider__item {
   outline: none;

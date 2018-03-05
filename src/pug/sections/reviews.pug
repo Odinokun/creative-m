@@ -1,0 +1,23 @@
+mixin reviews-slider__item(img, text)
+  .reviews-slider__item
+    .reviews-slider__img
+      img(src="assets/img/ava-" + img + ".jpg" alt="avatar")
+    .reviews-slider__text
+      p На днях сев машину (BMW F20), повернув руль появился ужасный свист и вылезло несколько ошибок. Знав про болячку рулевой рейки на данных машинах, грешили на неё. Записались в сервис, оказалось обломались болты на моторе рулевой рейки, ребята все оперативно сделали, надели слетевший ремень, установили новые болты. Костя большое спасибо, как всегда отлично и весело пообщались! ( Дима)
+//begin reviews
+section.reviews
+  .container
+    header.section-header
+      h3.section-header__title Отзывы о сервисе
+
+    .reviews-slider
+      +reviews-slider__item('01')
+      +reviews-slider__item('02')
+      +reviews-slider__item('03')
+      +reviews-slider__item('04')
+      +reviews-slider__item('05')
+
+  footer.reviews-footer
+    .container
+      a(href="#").btn.btn-blue Больше отзывов в нашем сообществе
+//end   reviews
