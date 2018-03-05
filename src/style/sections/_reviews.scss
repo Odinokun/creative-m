@@ -5,6 +5,10 @@
   background-size: cover;
   & > .container {
     padding: 55px 60px 40px 60px;
+
+    @include max(560) {
+      padding: 55px 10px 70px 10px;
+    }
   }
 }
 
@@ -19,6 +23,10 @@
     transition: background-color .5s;
     border-radius: 50%;
     background-color: #455f75;
+
+    @include max(560) {
+      top: calc(100% + 36px);
+    }
     &:hover {
       background-color: $highlight;
     }
@@ -26,10 +34,18 @@
   .slick-prev,
   [dir='rtl'] .slick-next {
     left: -55px;
+
+    @include max(560) {
+      left: 55px;
+    }
   }
   [dir='rtl'] .slick-prev,
   .slick-next {
     right: -55px;
+
+    @include max(560) {
+      right: 55px;
+    }
   }
 }
 .reviews-slider__item {
