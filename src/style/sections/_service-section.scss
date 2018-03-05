@@ -1,0 +1,124 @@
+.service-section {
+  background-image: url('../img/bg-service-section.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// begin service-section__header
+.service-section__header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 0;
+  &::before {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 1px;
+    content: '';
+    background-color: #fff;
+  }
+}
+.service-section__header--left {
+  flex: none;
+  width: 340px;
+  @include max(680) {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+.service-section__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: $highlight;
+}
+.service-section__title {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  &::before {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    content: '';
+    background-color: $highlight;
+  }
+}
+.service-section__header--text {
+  @include max(680) {
+    display: none;
+  }
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    color: #fff;
+  }
+}
+// end service-section__header
+
+.service-section__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 0 0;
+
+  @include max(920) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.service-section__item {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-bottom: 20px;
+
+  @include max(920) {
+    width: 50%;
+    max-width: 300px;
+  }
+  @include max(560) {
+    width: 100%;
+    max-width: 230px;
+
+  }
+}
+.service-section__icon {
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border: 3px solid $highlight;
+  border-radius: 50%;
+  svg {
+    width: 60%;
+    height: 60%;
+
+    fill: #fff;
+  }
+}
+.service-section__text {
+  font-size: 14px;
+  padding: 10px;
+  color: #fff;
+}
+
+.service-section__footer {
+  text-align: center;
+  .btn {
+    transform: translateY(50%);
+    z-index: 10;
+    position: relative;
+  }
+}
