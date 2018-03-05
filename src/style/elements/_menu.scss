@@ -104,6 +104,7 @@
     font-size: 24px;
     padding: 3px 16px;
   }
+
   &:hover {
     color: $highlight-hover;
 
@@ -126,6 +127,7 @@
   @include max(920) {
     padding-right: 0;
   }
+
   &::before,
   &::after {
     position: absolute;
@@ -198,6 +200,7 @@
   @include max(920) {
     display: block;
   }
+
   &::before,
   &::after {
     position: absolute;
@@ -214,6 +217,7 @@
 }
 .menu__sublist {
   position: absolute;
+  z-index: 1;
   top: 100%;
   left: 50%;
   margin: 0;
@@ -236,6 +240,7 @@
     opacity: 1;
     background-color: $highlight-hover;
   }
+
   &::before {
     position: absolute;
     top: -8px;
@@ -271,6 +276,7 @@
     padding: 0 16px;
     color: #fff;
   }
+
   &:hover {
     color: $highlight-hover;
   }
@@ -283,16 +289,16 @@
     justify-content: center;
     padding: 10px;
   }
+
   .header-contacts__item--phone {
     display: flex;
-    flex:none;
+    flex: none;
     svg {
       max-width: 23px;
       max-height: 23px;
     }
     a {
       font-size: 24px;
-
     }
   }
 }
