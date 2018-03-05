@@ -1,0 +1,26 @@
+mixin news-section__item(day, month, text)
+  .news-section__item
+    .news-section-item__date
+      span.news-section-item__date--day #{day}
+      span.news-section-item__date--month #{month}
+
+    a(href="article.html").news-section__link
+      .news-section__img
+        img(src="assets/img/blog.jpg" alt="BMW")
+      span.news-section__text #{text}
+
+//begin news-section
+section.news-section
+  .container
+    header.section-header
+      h3.section-header__title Новости и полезная информация
+
+    .news-section__list
+      +news-section__item('21', 'ноября', 'Новинки и события')
+      +news-section__item('21', 'ноября', 'Новинки модельного ряда BMW')
+      +news-section__item('21', 'ноября', 'Новинки и новости')
+
+    footer.news-section__footer
+      a(href="blog.html").btn.btn-blue Читать наш блог
+
+//end news-section
