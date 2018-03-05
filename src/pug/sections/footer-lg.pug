@@ -19,10 +19,18 @@ footer.footer-lg
     .footer-lg__inst
       h3.footer-lg__title Наш instagram
       .footer-lg__social
-        img(src="assets/img/inst.png" alt="soc")
+        // begin InstaWidget from https://instawidget.net/generate
+        a#link-22d055ff48c29bfbda0ea6bea1ef2d7af97ccc096aae8144bbee9b8c47416b87(href='https://instawidget.net/v/user/creative_motors') @creative_motors
+        script(src='https://instawidget.net/js/instawidget.js?u=22d055ff48c29bfbda0ea6bea1ef2d7af97ccc096aae8144bbee9b8c47416b87&width=220px')
+        // end InstaWidget from https://instawidget.net/generate
+
     .footer-lg__vk
       h3.footer-lg__title Мы вконтакте
       .footer-lg__social
-        img(src="assets/img/vk.jpg" alt="soc")
+        script(type='text/javascript', src='//vk.com/js/api/openapi.js?152')
+        // VK Widget
+        #vk_groups
+        script(type='text/javascript').
+          VK.Widgets.Group("vk_groups", {mode: 1}, 13340749);
 
 //end   footer-lg
