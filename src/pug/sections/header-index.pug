@@ -1,0 +1,65 @@
+// begin header
+header.header
+  //begin top-header
+  .top-header
+    .top-header__dark
+      .container
+        a(href="#").header__mobile-logo
+          img(src="assets/img/logo.jpg" alt="Creative Motors company logo")
+        .header-messenger
+          span.header-messenger__text Свяжитесь с нами прямо сейчас!
+          .header-messenger__list
+            a(href="tg://resolve?domain=nikname").header-messenger__link
+              img(src="assets/img/telegram.svg" alt="telegram link")
+            a(href="whatsapp://send?phone=+88129396401").header-messenger__link
+              img(src="assets/img/whatsapp.svg" alt="whatsapp link")
+            a(href="viber://chat?number=+88129396401").header-messenger__link
+              img(src="assets/img/viber.svg" alt="viber link")
+        button.btn.btn-red.popup-open Заказать звонок
+
+    include header-contacts
+  //end top-header
+
+  // begin main-header
+  .main-header.main-header--index
+    include ../elements/menu
+
+    // begin top-section
+    .top-section
+      .container
+        .top-section__left
+          h2.top-section__title
+            | Многопрофильный
+            br
+            | постгарантийный сервис
+            br
+            | по ремонту автомобилей BMW
+          h3.top-section__subtitle ваш bmw в надежных руках
+
+          ul.top-section__list
+            li.top-section__item
+              a(href="#").top-section__link 12 лет на рынке
+            li.top-section__item
+              a(href="#").top-section__link Доступные цены
+            li.top-section__item
+              a(href="#").top-section__link Гарантия на работы
+            li.top-section__item
+              a(href="#").top-section__link Наш BMW клуб
+
+        .top-section__right
+          form.top-section__form
+            h3.top-section__form-title
+              |Получите
+              =" "
+              span скидку
+            h4.top-section__form-subtitle при заказе через сайт
+            input.top-section__input(placeholder="Имя")
+            input.top-section__input.error(placeholder="Телефон")
+            input.top-section__input(placeholder="Модель авто")
+            input.top-section__input--submit.btn.btn-red(type="submit" value="получить скидку!")
+
+
+    // end top-section
+  // end main-header
+
+// end header

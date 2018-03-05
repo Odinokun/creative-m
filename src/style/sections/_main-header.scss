@@ -5,9 +5,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @include max(560) {
     margin-top: 0;
     padding-top: 0;
+  }
+  &.main-header--index {
+    background-image: url('../img/main-header-index.jpg');
   }
 }
 .header-bottom {
@@ -25,6 +29,7 @@
   margin-bottom: 0;
   text-transform: uppercase;
   color: #fff;
+
   @include max(560) {
     font-size: 28px;
   }
