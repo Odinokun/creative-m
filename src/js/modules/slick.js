@@ -1,10 +1,10 @@
 module.exports = function() {
 
   // begin Slick slider
-  $('.slick').slick({
-    dots: true,
+  $('.second-section-slider').slick({
+    dots: false,
     infinite: true,
-    speed: 500,
+    // speed: 500,
     fade: true,
     autoplay: true,
     cssEase: 'linear'
