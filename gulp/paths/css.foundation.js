@@ -3,6 +3,9 @@
 module.exports = [
   './node_modules/normalize.css/normalize.css',
 
+  // include thumbnail-scroller
+  './src/vendors/thumbnail-scroller/ThumbnailScroller.css',
+
   // include Slick slider
   './node_modules/slick-carousel/slick/slick.css',
 

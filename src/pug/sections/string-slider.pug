@@ -1,0 +1,33 @@
+mixin string-slider__item(img)
+  li.string-slider__item
+    a(href="assets/img/string-slider/slide-" + img + ".jpg" data-fancybox="gallery")
+      img(src="assets/img/string-slider/slide-" + img + ".jpg" alt="slide")
+
+//begin string-slider
+section.string-slider.mThumbnailScroller#my-thumbs-list(data-mts-axis="x")
+  ul
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+    +string-slider__item('01')
+    +string-slider__item('02')
+    +string-slider__item('03')
+//end string-slider
